@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Location & Hours - Haukai Restaurant</title>
+    <meta charset= "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+          key: "AIzaSyCmlVM8xP_xbkxoCJQwTM4K6s9ReQWUPag",
+          v: "beta",
+        });
+        // Initialize and add the map
+        let map;
+        async function initMap() {
+            // The location of restauraunt 
+            const position = { lat: -35.17834714052173, lng: 173.93524046277398};
+            // Request needed libraries.
+            //@ts-ignore
+            const { Map } = await google.maps.importLibrary("maps");
+            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+            // The map, centered at the marker
+            map = new Map(document.getElementById("map"), {
+            zoom: 10,
+            center: position,
+            mapId: "DEMO_MAP_ID",
+            });
+
+            // The marker, positioned at the restaurant
+            const marker = new AdvancedMarkerElement({
+            map: map,
+            position: position,
+            title: "Uluru",
+            });
+        }
+
+        initMap();
+    </script>
+</head>
+<body>
+    <div class="container-fluid vertical-center text-center">
+        <div class="col-sm-2 hidden-xs">
+          <img src="assets/logo.png" width=50% alt="">      
+        </div>
+    
+        <div class="col-sm-10">
+            <nav class="navbar">
+    
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#myNavbar" aria-label="menu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+    
+                    <div class="col-xs-3 hidden-lg hidden-md hidden-sm">
+                        <img src="assets/logo-sm.png" width="90%" alt="">      
+                    </div>
+                </div>
+          
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="menu-item"><a href="#">Home</a></li>
+                        <li class="dropdown menu-item">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">About<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="menu-item"><a href="#">About Us</a></li>
+                                <li class="menu-item"><a href="#">About Our Kai</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="#">Menu</a></li>
+                        <li class="menu-item"><a href="bookings.html">Bookings</a></li>
+                        <li class="menu-item"><a href="location.html">Location & Hours</a></li>
+                        <li class="menu-item"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center align-items-center background-filled">
+        <br><br><br><br>
+        <h1>Location & Opening Hours</h1>
+        <br><br><br>
+    </div>
+
+    <div class="container-fluid background-filled">
+        <div class="row vertical-center">
+            <div class="col-md-6 hidden-sm hidden-xs">
+                <!--The div element for the map -->
+                <div id="map" alt="A map pinning Kerikeri, Bay of Islands"></div>
+            </div>
+
+            <div class="col-md-6 col-xs-12 text-card text-center">
+                <h4>Our Location</h4>
+                <br>
+                <p> 1 Island Street Kerikeri, Bay of Islands, New Zealand<br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi magni inventore ipsum, nobis voluptas temporibus impedit expedita. Laboriosam eos sed consequuntur quibusdam aliquam quisquam sit, tempora veritatis voluptates velit molestiae.</p>
+                <br><br>
+                <button type="button" class="btn btn-responsive" onclick="window.location.href='https://www.google.com/maps/place/Kerikeri,+New+Zealand/@-35.213978,173.8804805,12z/data=!3m1!4b1!4m6!3m5!1s0x6d0bb73e31b0728b:0x500ef6143a2d500!8m2!3d-35.2294059!4d173.9472028!16zL20vMDF6NnZi'" alt="Open Google Maps for directions">Get Directions</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center align-items-center">
+        <div class="row vertical-center">
+            <div class="col-md-6 col-sm-12 text-card">
+                <h4>Opening Hours</h4>
+                <br>
+                <p>Monday - Tuesday: Closed<br>
+                Wednesday - Sunday: 5pm - 11pm<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, ea, enim dolores nostrum cum unde in vel fugit rerum ab tempore iure maiores nemo similique. Quae, perspiciatis ullam? At, consequatur.</p>
+                <br><br>
+                <button type="button" class="btn btn-responsive" onclick="window.location.href='https://calendar.google.com/calendar/embed?src=8615694421570657120b4c736b6d7e42b2e6b4a0001284c7bef64238be15d117%40group.calendar.google.com&ctz=Australia%2FMelbourne';">Open Calendar</button>
+            </div>
+                
+            <div class="col-md-6 hidden-sm hidden-xs">
+                <div class="responsiveCal">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Australia%2FMelbourne&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=MONTH&src=ODYxNTY5NDQyMTU3MDY1NzEyMGI0YzczNmI2ZDdlNDJiMmU2YjRhMDAwMTI4NGM3YmVmNjQyMzhiZTE1ZDExN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no" alt="Open link to Google Calendar"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center fixed-bottom">
+        <div class="row footer hidden-xs vertical-center">
+            <div class="col-md-2">
+                <p>logo</p>
+            </div>
+        <div class="col-md-2 footer">
+            <ul><a href="#">About</a></ul>
+            <ul><a href="location.html">Privacy Policy</a></ul>
+            <ul><a href="#">Contact</a></ul>
+        </div>
+        <div class="col-md-4">
+            <p>Opening Hours</p>
+            <p>Monday - Tuesday: Closed</p>
+            <p>Wednesday - Sunday: 5pm - 11pm</p>
+        </div>
+        <div class="col-md-4">
+            <p>Email: info@haukairestaurant.com</p>
+            <p>Phone: (09) 401 4019</p>
+            <p> Address: 1 Island Street Kerikeri, Bay of Islands, New Zealand</p>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center hidden-lg hidden-md hidden-sm">
+        <div class="row footer">
+            <div class="col-xs-6">
+                <p>© 2023 Haukai Restaurant</p>
+            </div>
+            <div class="col-xs-6">
+                <p><a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

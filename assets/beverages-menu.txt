@@ -1,0 +1,36 @@
+BEVERAGES.
+        RED.
+          Terrace Edge Pinot Noir, 2012, Wairarapa: Bottle 53, Glass 13.
+          Altitude Pinot Noir, 2010, Marlborough: Bottle 64, Glass 15.
+          Greystone Pinot Noir, 2012, Wairarapa: Bottle 73, Glass 17. 
+          Terrace Edge, Syrah, 2012, Wairarapa: Bottle 53, Glass 13. 
+          Altitude Syrah, 2010, Marlborough: Bottle 64, Glass 15. 
+          Greystone Syrah, 2012, Wairarapa: Bottle 73, Glass 17. 
+          Pegasus Bay Merlot, 2013, Waipara: Bottle 65, Glass 14. 
+          Pegasus Bay Pinot Noir, 2013, Waipara: Bottle 110.
+          
+        WHITE.
+          Spade Oak Pinot Gris, 2011, Gisborne: Bottle 40, Glass 10. 
+          Maude Pinot Gris, 2017, Otago: Bottle 49.50, Glass 11. 
+          Charles Wiffen Chardonnay, 2013, Otago: Bottle 48, Glass 11. 
+          Amisfield, Riesling, 2016, Otago: Bottle 53, Glass 12. 
+          Lamont Riesling, 2010, Otago: Bottle 57, Glass 13. 
+          Elephant Hill Viognier, 2013, Hawke's Bay: Bottle 55, Glass 12.
+          Folium Sauvignon Blanc, 2011, Marlborough: Bottle 52, Glass 11. 
+          Billecart-Salmon Brut Reserve, France: Bottle 120.
+          
+        BEER AND CIDER.
+          Garage project range $11.
+          Tuatara range $11. 
+          Panhead range $10.
+          Coopers ale $10. 
+          Heineken $11.
+          Moa cider $10.
+          Crooked cider $10.
+          
+        NON-ALCOHOLIC.
+          Mineral water $4.
+          Soft drinks $4.
+          Juice $4.
+          Coffee $4.50. 
+          Tea $3.50
